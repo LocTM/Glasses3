@@ -79,7 +79,7 @@ public class GlassesController {
 
     @GetMapping("/{id}/delete")
     public String delete(@PathVariable int id, Model model) {
-        model.addAttribute("glasses", glassesService.findById(id));
+        model.addAttribute("glasses", glassesService.findById((long) id));
         return "/delete";
     }
 
@@ -92,7 +92,7 @@ public class GlassesController {
 
     @GetMapping("/{id}/view")
     public String view(@PathVariable int id, Model model) {
-        model.addAttribute("glasses", glassesService.findById(id));
+        model.addAttribute("glasses", glassesService.findById((long) id));
         return "/view";
     }
 }
