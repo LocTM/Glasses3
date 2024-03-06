@@ -66,8 +66,8 @@ public class GlassesController {
     }
 
     @GetMapping("/{id}/edit")
-    public String update(@PathVariable int id, Model model) {
-        model.addAttribute("glasses", glassesService.findById((long) id));
+    public String update(@PathVariable Long id, Model model) {
+        model.addAttribute("glasses", glassesService.findById(id));
         return "/update";
     }
 
@@ -78,8 +78,8 @@ public class GlassesController {
     }
 
     @GetMapping("/{id}/delete")
-    public String delete(@PathVariable int id, Model model) {
-        model.addAttribute("glasses", glassesService.findById((long) id));
+    public String delete(@PathVariable Long id, Model model) {
+        model.addAttribute("glasses", glassesService.findById(id));
         return "/delete";
     }
 
@@ -91,8 +91,8 @@ public class GlassesController {
     }
 
     @GetMapping("/{id}/view")
-    public String view(@PathVariable int id, Model model) {
-        model.addAttribute("glasses", glassesService.findById((long) id));
+    public String view(@PathVariable Long id, Model model) {
+        model.addAttribute("glasses", glassesService.findById(id));
         return "/view";
     }
 }
