@@ -67,7 +67,7 @@ public class GlassesController {
 
     @GetMapping("/{id}/edit")
     public String update(@PathVariable int id, Model model) {
-        model.addAttribute("glasses", glassesService.findById(id));
+        model.addAttribute("glasses", glassesService.findById((long) id));
         return "/update";
     }
 
