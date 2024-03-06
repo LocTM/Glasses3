@@ -1,7 +1,14 @@
 package com.codegym.model;
 
+import javax.persistence.*;
+
+@Entity
+@Table(name = "Glasses3")
+
 public class Glasses {
     //    Glasses (id, code, price, color, description, img)
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String code;
     private int price;
